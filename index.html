@@ -12,69 +12,101 @@
 
 <body>
     <!--padre-->
-    <div class="container-fluid card">
+    <div class="padre container-fluid card d-flex justify-content-center">
         <!--header-->
         <div class="card-header">
             Featured
         </div>
-        <div class="card-body1">
-            <div class="alert alert-danger" role="alert">
-                A simple danger alert—check it out!
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <label for="card#" class="form-label">Card #</label>
-                    <input type="text" pattern="[0-9]{16}" class="form-control" id="card#"
-                        placeholder="XXXXXXXXXXXXXXXX" aria-label="card#">
+        <form>
+            <div class="card-body1">
+                <div class="alert alert-danger" role="alert">
+                    A simple danger alert—check it out!
                 </div>
-                <div class="col-4">
-                    <label for="cvc" class="form-label">CVC</label>
-                    <input type="number" class="form-control" id="cvc" placeholder="0000" aria-label="card#">
-                </div>
-                <div class="col-4">
-                    <label for="amount" class="form-label">Card #</label>
-                    <div class="d-flex">
-                        <i class="fa-brands fa-cc-mastercard"></i>
-                        <input type="text" class="form-control" id="amount" placeholder="amount" aria-label="card#">
+                <div class="row">
+                    <div class="col-4">
+                        <label for="card#" class="form-label">Card #</label>
+                        <input type="text" pattern="[0-9]{16}" class="form-control" id="card#"
+                            placeholder="XXXXXXXXXXXXXXXX" aria-label="card#">
                     </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center">
-            <div class="card-body2 row">
-                <label for="first-name" class="form-label col-10">First Name</label>
-                <input type="text" class="form-control" id="first-name">
-                <label for="city" class="form-label">City</label>
-                <input type="city" class="form-control" id="city">
-
-                <div class="col-4">
-                    <p>We accept:</p>
-                    <div class="d-flex justify-content-spacebetween bg-secondary rounded fs-6 p-2">
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="mastercard"> 
-                        <label class="form-check-label" for="visa"><i class="fa-brands fa-cc-mastercard"></i></label>
-
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="visa"> 
-                        <label class="form-check-label" for="visa"><i class="fa-brands fa-cc-visa"></i></label>
-
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="diners"> 
-                        <label class="form-check-label" for="diners"><i class="fa-brands fa-cc-diners-club"></i></label>
-
-                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="amex"> 
-                        <label class="form-check-label" for="amex"><i class="fa-brands fa-cc-amex"></i></label>
+                    <div class="col-4">
+                        <label for="cvc" class="form-label">CVC</label>
+                        <input type="number" class="form-control" id="cvc" placeholder="0000" aria-label="card#">
+                    </div>
+                    <div class="col-4">
+                        <label for="amount" class="form-label">Card #</label>
+                        <div class="d-flex">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <input type="text" class="form-control" id="amount" placeholder="amount" aria-label="card#">
+                        </div>
+    
                     </div>
                 </div>
-
             </div>
-            <div class="card-body3></div>
-        </div>
-        <div class=" card-footer d-flex justify-content-end">
-                <a href="#" class="btn btn-secondar">Cancel</a>
-                <a href="#" class="btn btn-primary">Send</a>
+            <div class="d-flex">
+                <div class="d-flex m-3">
+                    <div class="row">
+                        <fieldset class="col-sm-11">
+                            <label for="fname" class="form-label">First name</label>
+                            <input id="fname" type="text" class="form-control" />
+                        </fieldset>
+                        <fieldset class="col-sm-11">
+                            <label for="city" class="form-label">City</label>
+                            <input id="city" type="text" class="form-control" />
+                        </fieldset>
+                        <fieldset class="Payment mt-1 col-sm-6">
+                            <label for="we-acept" class="form-label">We acept:</label>
+                            <div class="bg-secondary rounded p-2 d-flex justify-content-around">
+                                <input id="we-acept" type="radio" name="payment" /><i class="fa-brands fa-cc-visa"
+                                    style="color: #ffffff;"></i>
+                                <input id="we-acept" type="radio" name="payment" /><i class="fa-brands fa-cc-mastercard"
+                                    style="color: #ffffff;"></i>
+                                <input id="we-acept" type="radio" name="payment" /><i class="fa-brands fa-cc-diners-club"
+                                    style="color: #ffffff;"></i>
+                                <input id="we-acept" type="radio" name="payment" /><i class="fa-brands fa-cc-amex"
+                                    style="color: #ffffff;"></i>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="row">
+                        <fieldset>
+                            <label for="lname" class="form-label">Last Name</label>
+                            <input id="lname" type="text" class="form-control"/>
+                        </fieldset>
+                        <div class="d-flex">
+                            <fieldset class="col-sm-6 pe-1 mt-4">
+                                <label for="exampleDataList" class="form-label">State</label>
+                                <input class="form-control w-100" list="datalistOptions" id="exampleDataList"
+                                    placeholder="pick a state">
+                                <datalist id="datalistOptions">
+                                    <option value="San Francisco">
+                                    <option value="New York">
+                                    <option value="Seattle">
+                                    <option value="Los Angeles">
+                                    <option value="Chicago">
+                                </datalist>
+                                </select>
+                            </fieldset>
+                            <fieldset class="col-sm-6 ps-1 mt-4">
+                                <label for="postal-c" class="form-label">Postal Code</label>
+                                <input type="number" id="postal-c" class="form-control me-5" />
+                            </fieldset>
+                        </div>
+                        <fieldset>
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" type="text" class="form-control"></textarea>
+                            <div id="emailHelp" class="form-text">Add any notes here.</div>
+                        </fieldset>
+                    </div>
+                </div>
             </div>
-        </div>
-
-
+            <div class="border-top border border-light-solid bg-light p-3">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-secondary me-3">Cancel</button>
+                    <button type="button" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
             crossorigin="anonymous"></script>

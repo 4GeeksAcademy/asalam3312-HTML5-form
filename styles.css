@@ -1,1 +1,4 @@
-
+.padre{
+    display: flex;
+    margin: auto;
+}
